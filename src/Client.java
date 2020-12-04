@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Client extends Person {
 	
 	private static int badge;
-	private String status;
-	public String getStatus() {
+	private static String status;
+	public static String getStatus() {
 		return status;
 	}
 
@@ -59,7 +59,6 @@ public class Client extends Person {
 		cli.setBadge(clientBadge);
 		
 		
-		
 		if(clientBadge >= 3) {
 			cli.setStatus("Client-fidele");
 		} else {
@@ -109,10 +108,15 @@ public class Client extends Person {
 					listObj.set(ClientId, ClientId+" "+getNomComplet()+" "+getNumeroTelephone()+" "+cli1.getEmail()+" "+getBadge());
 					break;
 				case 4 :
-					System.out.println("Entrer Nouveau nom du Client :");
+					System.out.println("Entrer Nouveau Badge du Client :");
 					int cliBadge = scanner.nextInt();
 					cli1.setBadge(cliBadge);
-					listObj.set(ClientId, ClientId+" "+getNomComplet()+" "+getNumeroTelephone()+" "+getEmail()+" "+cli1.getBadge());
+					if(cliBadge >= 3) {
+							cli1.setStatus("Client-fidele");
+						} else {
+							cli1.setStatus("Client-normal");
+					}
+					listObj.set(ClientId, ClientId+" "+getNomComplet()+" "+getNumeroTelephone()+" "+getEmail()+" "+cli1.getBadge()+" "+getStatus());
 					break;
 				default :
 					System.out.println("Le programme est arreté");
