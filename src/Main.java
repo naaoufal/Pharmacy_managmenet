@@ -20,7 +20,7 @@ public class Main {
 			System.out.println("11 - Afficher liste des Clients");
 			System.out.println("12 - Modifier Un Client");
 			System.out.println("13 - Supprimer Un Pharmacier");
-			System.out.println("14 - Recherche Un Clinet par l'index");
+			System.out.println("14 - Recherche Un Pharmacier par l'index");
 			System.out.println("15 - Clinet fideles");
 			System.out.println("16 - Exit");
 			
