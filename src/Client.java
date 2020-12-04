@@ -4,6 +4,15 @@ import java.util.Scanner;
 public class Client extends Person {
 	
 	private static int badge;
+	private String status;
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 	static ArrayList<String> listObj = new ArrayList<String>();
 	static Scanner scanner = new Scanner(System.in);
 	
@@ -20,6 +29,7 @@ public class Client extends Person {
 	public Client() {
 		super();
 		this.badge = badge;
+		this.status = status;
 		// TODO Auto-generated constructor stub
 		
 	}
@@ -48,7 +58,15 @@ public class Client extends Person {
 		int clientBadge = scanner.nextInt();
 		cli.setBadge(clientBadge);
 		
-		listObj.add(cli.getIdentifiant()+" "+cli.getNomComplet()+" "+cli.getNumeroTelephone()+" "+cli.getEmail()+" "+cli.getBadge());
+		
+		
+		if(clientBadge >= 3) {
+			cli.setStatus("Client-fidele");
+		} else {
+			cli.setStatus("Client-normal");
+		}
+		
+		listObj.add(cli.getIdentifiant()+" "+cli.getNomComplet()+" "+cli.getNumeroTelephone()+" "+cli.getEmail()+" "+cli.getBadge()+" "+cli.getStatus());
 	}
 	
 	//Modifier un Client
