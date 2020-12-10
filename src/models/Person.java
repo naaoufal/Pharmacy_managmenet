@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package models;
 
 public class Person {
 	private int identifiant;
@@ -31,6 +31,7 @@ public class Person {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	
 	public Person () {
 

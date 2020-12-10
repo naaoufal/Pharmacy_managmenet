@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+import models.Client;
+import models.Medicament;
+import models.Pharmacier;
+
 public class Main {
 	public static void main (String[] args) {
 		int input;
@@ -19,9 +23,9 @@ public class Main {
 			System.out.println("10 - Ajouter Nouveau Client");
 			System.out.println("11 - Afficher liste des Clients");
 			System.out.println("12 - Modifier Un Client");
-			System.out.println("13 - Supprimer Un Pharmacier");
+			System.out.println("13 - Supprimer Un Client");
 			System.out.println("14 - Recherche Un Pharmacier par l'index");
-			System.out.println("15 - Clinet fideles");
+			System.out.println("15 - Order liste des Client");
 			System.out.println("16 - Exit");
 			
 			System.out.println("Enter un nombre :");
@@ -30,49 +34,63 @@ public class Main {
 			
 			switch (input) {
 				case 1 :
-					Pharmacier.AjouterFamacier();
+					Pharmacier PharAjou = new Pharmacier();
+					PharAjou.AjouterFamacier();
 					break;
 				case 2 : 
-					Pharmacier.AffichePharmaciers();
+					Pharmacier PharAff = new Pharmacier();
+					PharAff.AffichePharmaciers();
 					break;
 				case 3 :
-					Pharmacier.ModifierPharmacier();
+					Pharmacier PharMod = new Pharmacier();
+					PharMod.ModifierPharmacier();
 					break;
 				case 4 :
-					Pharmacier.SupprimerPharmacier();
+					Pharmacier PharSupp = new Pharmacier();
+					PharSupp.SupprimerPharmacier();
 					break;
 				case 5 :
-					Medicament.AjouterMedi();
+					Medicament MediAjo = new Medicament();
+					MediAjo.AjouterMedi();
 					break;
 				case 6 :
-					Medicament.AfficheMedicament();
+					Medicament MediAff = new Medicament();
+					MediAff.AfficheMedicament();
 					break;
 				case 7 :
-					Medicament.ModifierMedicament();
+					Medicament MediMod = new Medicament();
+					MediMod.ModifierMedicament();
 					break;
 				case 8 :
-					Medicament.SupprimerMedicamnt();
+					Medicament MediSupp = new Medicament();
+					MediSupp.SupprimerMedicamnt();
 					break;
 				case 9 :
-					Medicament.RecherchMedicament();
+					Medicament MediRech = new Medicament();
+					MediRech.RecherchMedicament();
 					break;
 				case 10 :
-					Client.AjouterClient();
+					Client cliAjou = new Client();
+					cliAjou.AjouterClient();
 					break;
 				case 11 :
-					Client.AfficheClient();
+					Client cliAff = new Client();
+					cliAff.AfficheClient();
 					break;
 				case 12 :
-					Client.ModificationClient();
+					Client cliMod = new Client();
+					cliMod.ModificationClient();
 					break;
 				case 13 :
-					Client.SupprimerClient();
+					Client cliSupp = new Client();
+					cliSupp.SupprimerClient();
 					break;
 				case 14 :
-					Pharmacier.RecherchPharmacier();
+					Pharmacier PharRech = new Pharmacier();
+					PharRech.RecherchPharmacier();
 					break;
 				case 15 :
-					Client.Clientfidele();
+					System.out.println("testing field !!!");
 					break;
 				default :
 					System.out.println("BOOM !!!");
